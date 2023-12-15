@@ -1,0 +1,8 @@
+package prova02;
+
+public enum Status {
+	QUITADO,
+	PENDENTE,
+	CANCELADO
+	
+}
