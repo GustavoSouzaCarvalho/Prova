@@ -1,0 +1,17 @@
+package prova02;
+
+public class Banco implements Pagamento{
+private static final Double TAXA = 0.02;
+
+@Override
+public Double calculacontribuicao(Double quantia, Double contribuicao) {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public Double calculaadicional(Double quantia, Integer num) {
+	// TODO Auto-generated method stub
+	return TAXA*quantia/num;
+	}
+}
