@@ -1,0 +1,18 @@
+package prova02;
+import java.time.LocalDate;
+public class Servico {
+	 private Pagamento pagamento;
+
+	    public Servico(Pagamento pagamento) {
+	        this.pagamento = pagamento;
+	    }
+
+	    public void gerarParcelas(Contrato contrato, Integer meses) {
+	        LocalDate dataAtual = contrato.getAss();
+	        for (int i = 1; i <= meses; i++) {
+	            LocalDate dataVencimento = dataAtual.plusMonths(i);
+	            Double valorParcela = contrato.getRemuneracao() / meses + pagamento.calculaadicional(contrato.getRemuneracao() / meses, i) + pagamento.calculaadicional(contrato.getRemuneracao() / meses);
+	            contrato.getPrestacao().add(new Prestaco(dataVencimento, valorParcela));
+	        }
+	    }
+	}
