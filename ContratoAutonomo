@@ -1,0 +1,17 @@
+package prova02;
+
+import java.time.LocalDate;
+public class ContratoAutonomo extends Contrato{
+private Double contribuicao;
+	public ContratoAutonomo(Integer numero, LocalDate ass, Double remuneracao, Double contribuicao) {
+		super(numero, ass, remuneracao);
+		this.contribuicao = contribuicao;
+	}
+	public Double getContribuicao() {
+		return contribuicao;
+	}
+	public void setContribuicao(Double contribuicao) {
+		this.contribuicao = contribuicao;
+	}
+	
+}
