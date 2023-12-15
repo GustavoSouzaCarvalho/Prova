@@ -1,0 +1,6 @@
+package prova02;
+
+public interface Pagamento {
+	Double calculacontribuicao(Double quantia, Double contribuicao);
+	Double calculaadicional(Double quantia, Integer num);
+}
