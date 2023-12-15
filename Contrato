@@ -1,0 +1,39 @@
+package prova02;
+import java.time.LocalDate;
+public class Contrato {
+	private Integer numero;
+	private LocalDate ass;
+	private Double remuneracao;
+	private Status status;
+	public Contrato(Integer numero, LocalDate ass, Double remuneracao) {
+		super();
+		this.numero = numero;
+		this.ass = ass;
+		this.remuneracao = remuneracao;
+	}
+	public Integer getNumero() {
+		return numero;
+	}
+	public void setNumero(Integer numero) {
+		this.numero = numero;
+	}
+	public LocalDate getAss() {
+		return ass;
+	}
+	public void setAss(LocalDate ass) {
+		this.ass = ass;
+	}
+	public Double getRemuneracao() {
+		return remuneracao;
+	}
+	public void setRemuneracao(Double remuneracao) {
+		this.remuneracao = remuneracao;
+	}
+	public Status getStatus() {
+		return status;
+	}
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+	
+}
