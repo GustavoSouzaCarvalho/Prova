@@ -1,0 +1,17 @@
+package prova02;
+
+import java.time.LocalDate;
+public class ContratoTemporal extends Contrato{
+private LocalDate fim;
+	public ContratoTemporal(Integer numero, LocalDate ass, Double remuneracao, LocalDate fim) {
+		super(numero, ass, remuneracao);
+		this.fim = fim;
+	}
+	public LocalDate getFim() {
+		return fim;
+	}
+	public void setFim(LocalDate fim) {
+		this.fim = fim;
+	}
+
+}
