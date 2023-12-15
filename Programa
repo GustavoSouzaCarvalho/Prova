@@ -1,0 +1,39 @@
+package prova02;
+import java.time.LocalDate;	import java.util.Scanner;
+public class Programa {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Numero: ");
+		int numero = sc.nextInt();		
+		
+		System.out.println("Data de assinatura: ");	sc.nextLine();
+		LocalDate ass = LocalDate.parse(sc.nextLine());
+		
+		System.out.println("Remuneracao total do contrato(sem adicional/INSS): ");
+		double remuneracao = sc.nextDouble();
+		
+		System.out.println("Qual tipo de contrato? \n\n1.Tempo determinado\n2.Trabalho autonomo");
+		int x = sc.nextInt();
+		switch(x){
+		case 1:
+			System.out.println("Data do fim da vigencia: ");	sc.nextLine();
+			LocalDate fim = LocalDate.parse(sc.nextLine());
+			ContratoTemporal tp =  new ContratoTemporal(numero, ass, remuneracao, fim);
+			System.out.println("Ordens de pagamento: ");
+			break;
+		case 2:
+			System.out.println("Porcentagem de contribuicao INSS: ");
+			double porcentagem = sc.nextDouble();
+			ContratoAutonomo ca = new ContratoAutonomo(numero, ass, remuneracao, porcentagem);
+			System.out.println("Numero de ordens de pagamento: ");
+			int ordem = sc.nextInt();
+			System.out.println("Ordens de pagamento: ");
+			break;
+		}
+
+	}
+
+
+}
